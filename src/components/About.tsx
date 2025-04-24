@@ -1,3 +1,10 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+
 import React from 'react';
 import { Leaf, Heart, Star } from 'lucide-react';
 
@@ -11,12 +18,12 @@ export const About = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-yellow-400 mb-4">Our Story & Vision</h2>
           <p className="text-gray-300 text-lg">Meet Jacob Sandoval, the kitchen herbalist and flavor alchemist.
-</p>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -27,7 +34,7 @@ export const About = () => {
               className="w-full h-[400px] object-cover"
             />
           </div>
-          
+
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-yellow-400">A Journey of Natural Healing</h3>
             <p className="text-gray-300">

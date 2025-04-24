@@ -1,3 +1,10 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+
 const express = require('express');
 const { config } = require('dotenv');
 const { Resend } = require('resend');

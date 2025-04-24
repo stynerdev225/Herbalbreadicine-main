@@ -1,5 +1,10 @@
-// src/components/ChefCards.tsx
-
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+import React from 'react';
 import { useState } from 'react';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';

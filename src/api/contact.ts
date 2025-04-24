@@ -1,3 +1,10 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+
 import { Resend } from 'resend';
 
 const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY);

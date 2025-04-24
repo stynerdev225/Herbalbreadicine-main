@@ -1,4 +1,10 @@
-// React import removed as it's not used in this file
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+import React from 'react';
 import { Cookie, Coffee, Cake, Leaf } from 'lucide-react';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';

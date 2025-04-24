@@ -1,3 +1,9 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
 import React from 'react';
 import { Disc } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -13,7 +19,7 @@ export const ServicesSection = () => {
             </div>
             <h2 className="text-7xl font-black text-white">OUR SERVICES</h2>
           </div>
-          
+
           <nav>
             <ul className="flex flex-wrap justify-center gap-16">
               <li>

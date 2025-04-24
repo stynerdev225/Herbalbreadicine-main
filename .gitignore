@@ -44,6 +44,9 @@ dist-ssr
 
 # large files
 *.zip
-*.mp4
+# Include important video files
+# /public/videos/homepage.mp4
+# /public/videos/counterfood.mp4
+# But exclude other large mp4 files
 /videos
 untitled/

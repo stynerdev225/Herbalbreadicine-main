@@ -1,7 +1,13 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
 import React from 'react';
-import { 
-  BrowserRouter as Router, 
-  Routes, 
+import {
+  BrowserRouter as Router,
+  Routes,
   Route,
   createRoutesFromElements
 } from 'react-router-dom';
@@ -49,9 +55,9 @@ const App: React.FC = () => {
         <Route path="/thank-you" element={<MainLayout><ThankYou /></MainLayout>} />
         <Route path="/privacy" element={<MainLayout><PrivacyPolicy /></MainLayout>} />
         <Route path="/terms" element={<MainLayout><TermsAndConditions /></MainLayout>} />
-        <Route 
-          path="/store/all-digital-releases" 
-          element={<MainLayout><AllDigitalReleasesPage /></MainLayout>} 
+        <Route
+          path="/store/all-digital-releases"
+          element={<MainLayout><AllDigitalReleasesPage /></MainLayout>}
         />
       </Routes>
     </Router>

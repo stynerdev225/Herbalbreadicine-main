@@ -1,3 +1,9 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
 import React, { useState } from 'react';
 import { Send, Phone, MapPin, Mail, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -22,7 +28,13 @@ export const Contact = () => {
     setStatus({ type: null, message: '' });
 
     try {
-      // Send form data to our API endpoint instead of calling SendGrid directly
+      console.log("Submitting form with data:", {
+        name: formData.name,
+        from: formData.email,
+        message: formData.message
+      });
+
+      // Send form data to our API endpoint
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -35,10 +47,19 @@ export const Contact = () => {
         }),
       });
 
-      const data = await response.json();
+      console.log("Response status:", response.status);
+
+      let data;
+      try {
+        data = await response.json();
+        console.log("API response:", data);
+      } catch (jsonError) {
+        console.error("Error parsing JSON response:", jsonError);
+        throw new Error("Could not parse server response. Please try again.");
+      }
 
       if (!response.ok) {
-        throw new Error(data.message || 'Something went wrong');
+        throw new Error(data?.message || 'Something went wrong with the submission');
       }
 
       // Show success message

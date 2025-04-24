@@ -1,5 +1,12 @@
 "use client"
 
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
+
 import { FacebookIcon, InstagramIcon, TwitterIcon, ArrowUp, Sparkles, Mail, Wheat } from "lucide-react"
 import { Link } from "react-router-dom"
 import { useState } from "react"

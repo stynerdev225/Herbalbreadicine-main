@@ -1,3 +1,9 @@
+/**
+ * Developed by Stiner.dev
+ * Professional Web Developer
+ * April 24, 2025
+ * Contact: https://stiner.dev
+ */
 import React, { useRef } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -118,7 +124,7 @@ const RecordSection: React.FC = () => {
   const handleShare = async (album: Album, track?: Track) => {
     const shareTitle = track ? `${track.title} from ${album.title}` : album.title;
     const id = track ? `${album.title}-${track.title}` : album.title;
-    
+
     try {
       await navigator.clipboard.writeText(window.location.href);
       setCopiedId(id);
@@ -145,12 +151,12 @@ const RecordSection: React.FC = () => {
             <div className="flex items-center gap-8">
               <div className="text-zinc-300">
                 <svg width="80" height="80" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2ZM12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,16.42 16.42,20 12,20ZM12,7C9.24,7 7,9.24 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,9.24 14.76,7 12,7ZM12,15C10.34,15 9,13.66 9,12C9,10.34 10.34,9 12,9C13.66,9 15,10.34 15,12C15,13.66 13.66,15 12,15Z"/>
+                  <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2ZM12,20C7.58,20 4,16.42 4,12C4,7.58 7.58,4 12,4C16.42,4 20,7.58 20,12C20,16.42 16.42,20 12,20ZM12,7C9.24,7 7,9.24 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,9.24 14.76,7 12,7ZM12,15C10.34,15 9,13.66 9,12C9,10.34 10.34,9 12,9C13.66,9 15,10.34 15,12C15,13.66 13.66,15 12,15Z" />
                 </svg>
               </div>
               <h2 className="text-7xl font-black text-black">LATEST RELEASED</h2>
             </div>
-            <Link 
+            <Link
               to="/store/all-digital-releases"
               className="flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold transition"
             >
@@ -219,7 +225,7 @@ const RecordSection: React.FC = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
+            <Link
               to="/store/all-digital-releases"
               className="bg-yellow-400 hover:bg-yellow-500 text-black px-8 py-4 rounded-full font-bold inline-flex items-center gap-2 transition"
             >
@@ -238,7 +244,7 @@ const RecordSection: React.FC = () => {
             </div>
             <h2 className="text-7xl font-black text-white">DISCOGRAPHY</h2>
           </div>
-          
+
           <div className="space-y-16">
             {albums.map((album) => (
               <div key={album.title} className="bg-zinc-900/50 rounded-xl p-8 border-[3px] border-white/60">
@@ -254,13 +260,13 @@ const RecordSection: React.FC = () => {
                     <button className="bg-yellow-400 hover:bg-yellow-500 p-4 rounded-full text-black">
                       <Play size={24} />
                     </button>
-                    <button 
+                    <button
                       onClick={() => handleDownload(album)}
                       className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-full transition text-white"
                     >
                       <Download size={24} />
                     </button>
-                    <button 
+                    <button
                       onClick={() => handleShare(album)}
                       className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-full transition text-white"
                     >
@@ -268,10 +274,10 @@ const RecordSection: React.FC = () => {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   {album.tracks.map((track, index) => (
-                    <div 
+                    <div
                       key={track.title}
                       className="flex items-center justify-between p-4 hover:bg-zinc-800/50 rounded-lg transition border-[3px] border-white/40"
                     >
@@ -282,13 +288,13 @@ const RecordSection: React.FC = () => {
                         <span className="font-medium text-white">{track.title}</span>
                       </div>
                       <div className="flex items-center gap-6">
-                        <button 
+                        <button
                           onClick={() => handleDownload(album, track)}
                           className="text-gray-400 hover:text-yellow-400 transition"
                         >
                           <Download size={20} />
                         </button>
-                        <button 
+                        <button
                           onClick={() => handleShare(album, track)}
                           className="text-gray-400 hover:text-yellow-400 transition"
                         >

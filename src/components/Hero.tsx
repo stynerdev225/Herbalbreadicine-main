@@ -16,7 +16,7 @@ export const Hero = () => {
           {/* Lighter Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60 z-10" />
 
-          {/* Video Element */}
+          {/* Video Element - Updated with Cloudflare R2 URL */}
           <video
             autoPlay
             loop
@@ -25,7 +25,7 @@ export const Hero = () => {
             preload="auto"
             className="w-full h-full object-cover"
           >
-            <source src="/videos/homepage.mp4" type="video/mp4" />
+            <source src="https://pub-1b51343f3078454cac732a6a16b5783a.r2.dev/homepage.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
@@ -71,7 +71,7 @@ export const Hero = () => {
         >
           <Sparkles className="w-16 h-16 text-yellow-400 animate-bounce" />
         </motion.div>
-        
+
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -81,7 +81,7 @@ export const Hero = () => {
           Welcome to{' '}
           <span className="text-yellow-400 animate-pulse">Herbal Breadicine</span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -91,7 +91,7 @@ export const Hero = () => {
           Celebrating the Earth and each other through delicious moments of nourishment.
 
         </motion.p>
-        
+
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

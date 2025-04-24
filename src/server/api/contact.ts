@@ -1,10 +1,10 @@
-import { Request, Response, RequestHandler } from 'express';
+import { Request, Response, NextFunction } from 'express';
 import sgMail from '@sendgrid/mail';
 
 // Initialize SendGrid with your API key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
 
-export const contactHandler: RequestHandler = async (req, res, next) => {
+export const contactHandler = async (req: Request, res: Response, next: NextFunction) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }

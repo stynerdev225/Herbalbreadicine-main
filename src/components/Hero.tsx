@@ -79,7 +79,7 @@ export const Hero = () => {
           className="text-5xl sm:text-7xl font-bold text-white mb-8"
         >
           Welcome to{' '}
-          <span className="text-yellow-400 animate-pulse">Herbalbreadicine</span>
+          <span className="text-yellow-400 animate-pulse">Herbal Breadicine</span>
         </motion.h1>
         
         <motion.p
@@ -88,7 +88,8 @@ export const Hero = () => {
           transition={{ duration: 0.8, delay: 1.1 }}
           className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto"
         >
-          Where ancient herbal wisdom meets magical baking artistry
+          Celebrating the Earth and each other through delicious moments of nourishment.
+
         </motion.p>
         
         <motion.div

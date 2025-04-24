@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hero } from '../components/Hero';
-import { RecordSection } from '../components/RecordSection';
+import RecordSection from '../components/RecordSection';
 
 const Home: React.FC = () => {
   return (

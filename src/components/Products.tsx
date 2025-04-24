@@ -14,15 +14,15 @@ export const Products = () => {
       badges: ["Organic", "Vegan"]
     },
     {
-      name: "Vitality Bread",
-      description: "Ancient grains with rosemary and thyme",
+      name: "Homemade Salsa",
+      description: "organic seasonal tomatoes, chili peppers, onions, garlic, cilantro, salt and lime.",
       price: "$6.99",
       icon: <Coffee className="w-8 h-8" />,
       image: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&q=80",
       badges: ["Organic", "Gluten-Free"]
     },
     {
-      name: "Golden Bliss Cake",
+      name: "Chili Oil",
       description: "With turmeric and orange blossom",
       price: "$5.99",
       icon: <Cake className="w-8 h-8" />,
@@ -44,7 +44,7 @@ export const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl font-bold text-yellow-400 mb-4">Magical Creations</h2>
-          <p className="text-gray-300 text-lg">Discover our enchanted selection of organic treats</p>
+          <p className="text-gray-300 text-lg">Discover our seasonal earth flavor celebrations</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

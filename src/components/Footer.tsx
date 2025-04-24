@@ -90,7 +90,7 @@ export const Footer = () => {
           {/* Top section with extra large brand name */}
           <div className="mb-16">
             <h2 className="text-7xl sm:text-8xl md:text-9xl font-bold tracking-tighter text-white mb-8 relative">
-              HERBALBREADICINE
+              HERBAL BREADICINE
               <span className="absolute -top-4 -right-4 text-yellow-500">
                 <Sparkles className="w-8 h-8" />
               </span>
@@ -206,6 +206,8 @@ export const Footer = () => {
                 &copy; {currentYear} Herbalbreadicine.
                 <br />
                 All rights reserved.
+                <br />
+                <span className="text-gray-400 text-xs">Contact us at <a href="mailto:catering@herbalbreadicine.com" className="text-yellow-400 hover:underline">catering@herbalbreadicine.com</a></span>
               </p>
               <button
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -216,25 +218,25 @@ export const Footer = () => {
               </button>
             </div>
           </div>
-          
+
           {/* Legal Links Section */}
           <div className="mt-12 pt-6 border-t border-gray-800/30 flex flex-col md:flex-row justify-center items-center text-xs text-gray-500 space-y-2 md:space-y-0">
             <div className="flex space-x-6">
-              <Link 
-                to="/privacy" 
+              <Link
+                to="/privacy"
                 className="hover:text-yellow-400 transition-colors"
                 onClick={handleLinkClick}
               >
                 Privacy Policy
               </Link>
-              <Link 
-                to="/terms" 
+              <Link
+                to="/terms"
                 className="hover:text-yellow-400 transition-colors"
                 onClick={handleLinkClick}
               >
                 Terms & Conditions
               </Link>
-              <button 
+              <button
                 className="hover:text-yellow-400 transition-colors"
                 onClick={() => setIsCookieSettingsOpen(true)}
               >
@@ -254,7 +256,7 @@ export const Footer = () => {
           <Mail className="w-14 h-14 text-yellow-500" />
         </div>
       </footer>
-      <CookieSettings 
+      <CookieSettings
         isOpen={isCookieSettingsOpen}
         onClose={() => setIsCookieSettingsOpen(false)}
       />

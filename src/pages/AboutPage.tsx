@@ -31,7 +31,7 @@ export const AboutPage: React.FC = () => {
             </div>
             <h1 className="text-5xl sm:text-7xl font-bold text-yellow-400 mb-6">Our Story</h1>
             <p className="text-xl sm:text-2xl text-gray-300 max-w-3xl mx-auto">
-              A journey of healing through organic baking and ancient wisdom
+              A journey of healing through organic nourishment
             </p>
           </motion.div>
         </div>
@@ -91,7 +91,7 @@ export const AboutPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-yellow-400 mb-6">Our Mission</h2>
             <p className="text-xl text-gray-300 leading-relaxed">
               To create wholesome, healing foods that nourish both body and soul, while honoring
-              ancient wisdom and supporting sustainable organic farming practices.
+              ancient wisdom and supporting sustainable organic earth practices.
             </p>
           </motion.div>
 
@@ -105,7 +105,7 @@ export const AboutPage: React.FC = () => {
               {
                 icon: <Heart className="w-8 h-8 text-yellow-400" />,
                 title: "Healing Recipes",
-                description: "Blending traditional herbal wisdom with modern baking"
+                description: "Blending traditional herbal wisdom with modern culinary artistry"
               },
               {
                 icon: <Star className="w-8 h-8 text-yellow-400" />,

@@ -15,7 +15,8 @@ export const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-yellow-400 mb-4">Our Story & Vision</h2>
-          <p className="text-gray-300 text-lg">Meet Jacob Sandoval, the visionary behind Herbalbreadicine</p>
+          <p className="text-gray-300 text-lg">Meet Jacob Sandoval, the kitchen herbalist and flavor alchemist.
+</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
@@ -30,13 +31,12 @@ export const About = () => {
           <div className="space-y-6">
             <h3 className="text-2xl font-bold text-yellow-400">A Journey of Natural Healing</h3>
             <p className="text-gray-300">
-              Jacob's passion for combining traditional herbal wisdom with artisanal baking began with a simple dream: 
-              to create delicious, healing foods that nourish both body and soul. With years of experience in organic 
-              farming and herbalism, he founded Herbalbreadicine to share nature's gifts through every carefully crafted recipe.
+              Jacob is passionate about supporting the healing of the land and all of its beings. He believes healing starts from having deep gratitude for and celebrating the gifts of life that we do have. He does this in his own life through listening to the ways that he feels guided to share these sweet expressions of life. And sharing these gifts through many special moments with loved ones.
+
+
             </p>
             <p className="text-gray-300">
-              Today, we continue to honor that vision by sourcing only the finest organic ingredients and incorporating 
-              healing herbs into our unique creations.
+              We’d love to share these gifts with you for whenever your life is calling in some tasty nourishment!
             </p>
           </div>
         </div>

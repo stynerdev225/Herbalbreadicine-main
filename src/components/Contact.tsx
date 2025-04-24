@@ -2,17 +2,6 @@ import React, { useState } from 'react';
 import { Send, Phone, MapPin, Mail, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import sgMail from '@sendgrid/mail';
-
-// Initialize SendGrid
-const apiKey = import.meta.env.VITE_SENDGRID_API_KEY;
-
-// Only initialize SendGrid if we have a valid API key
-if (apiKey && apiKey.startsWith('SG.')) {
-  sgMail.setApiKey(apiKey);
-} else {
-  console.warn('Valid SendGrid API key not found. Contact form will not send emails.');
-}
 
 export const Contact = () => {
   const navigate = useNavigate();
@@ -33,28 +22,38 @@ export const Contact = () => {
     setStatus({ type: null, message: '' });
 
     try {
-      if (!apiKey || !apiKey.startsWith('SG.')) {
-        throw new Error('SendGrid API key is not properly configured');
+      // Send form data to our API endpoint instead of calling SendGrid directly
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          from: formData.email,
+          message: formData.message
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Something went wrong');
       }
 
-      const msg = {
-        to: 'catering@herbalbreadicine.com',
-        from: 'noreply@herbalbreadicine.com',
-        replyTo: formData.email,
-        subject: `New Contact Form Message from ${formData.name}`,
-        text: `From: ${formData.name} (${formData.email})\n\nMessage:\n${formData.message}`,
-        html: `
-          <h2>New Contact Form Message</h2>
-          <p><strong>From:</strong> ${formData.name}</p>
-          <p><strong>Email:</strong> ${formData.email}</p>
-          <p><strong>Message:</strong></p>
-          <p>${formData.message.replace(/\n/g, '<br>')}</p>
-        `
-      };
+      // Show success message
+      setStatus({
+        type: 'success',
+        message: 'Thank you for your message! We\'ll be in touch soon.'
+      });
 
-      await sgMail.send(msg);
+      // Clear form
       setFormData({ name: '', email: '', message: '' });
-      navigate('/thank-you');
+
+      // Navigate to thank you page after a short delay
+      setTimeout(() => {
+        navigate('/thank-you');
+      }, 2000);
     } catch (error: any) {
       console.error('Form submission error:', error);
       setStatus({
@@ -74,7 +73,7 @@ export const Contact = () => {
   return (
     <section id="contact" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -170,11 +169,10 @@ export const Contact = () => {
               ></textarea>
             </div>
             {status.message && (
-              <div className={`p-4 rounded-lg ${
-                status.type === 'success' 
-                  ? 'bg-green-500/10 text-green-500 border border-green-500/20' 
-                  : 'bg-red-500/10 text-red-500 border border-red-500/20'
-              }`}>
+              <div className={`p-4 rounded-lg ${status.type === 'success'
+                ? 'bg-green-500/10 text-green-500 border border-green-500/20'
+                : 'bg-red-500/10 text-red-500 border border-red-500/20'
+                }`}>
                 {status.message}
               </div>
             )}

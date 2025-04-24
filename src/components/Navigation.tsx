@@ -46,7 +46,7 @@ export const Navigation = () => {
             <Link to="/" className="flex items-center space-x-3 group" onClick={handleNavClick}>
               <Sparkles className="w-8 h-8 text-yellow-400 group-hover:animate-pulse transition-all duration-300" />
               <span className="font-extrabold text-white text-4xl tracking-tight group-hover:text-yellow-400 transition-colors duration-300">
-                Herbalbreadicine
+                Herbal Breadicine
               </span>
             </Link>
           </div>
